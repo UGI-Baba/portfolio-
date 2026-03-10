@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+<meta charset="UTF-8">
+<title>ToDo Liste</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Meine ToDo Liste</h1>
+
+<input id="taskInput" placeholder="Neue Aufgabe">
+<button onclick="addTask()">Hinzufügen</button>
+
+<ul id="taskList"></ul>
+
+<h2>Taschenrechner</h2>
+<div class="calculator">
+  <input type="text" id="display" readonly>
+  <div class="buttons">
+    <button onclick="appendNumber('7')">7</button>
+    <button onclick="appendNumber('8')">8</button>
+    <button onclick="appendNumber('9')">9</button>
+    <button onclick="appendOperator('/')" class="operator">/</button>
+    <button onclick="appendNumber('4')">4</button>
+    <button onclick="appendNumber('5')">5</button>
+    <button onclick="appendNumber('6')">6</button>
+    <button onclick="appendOperator('*')" class="operator">*</button>
+    <button onclick="appendNumber('1')">1</button>
+    <button onclick="appendNumber('2')">2</button>
+    <button onclick="appendNumber('3')">3</button>
+    <button onclick="appendOperator('-')" class="operator">-</button>
+    <button onclick="appendNumber('0')">0</button>
+    <button onclick="appendNumber('.')">.</button>
+    <button onclick="calculate()" class="equals">=</button>
+    <button onclick="appendOperator('+')" class="operator">+</button>
+    <button onclick="clearDisplay()" class="clear">C</button>
+  </div>
+</div>
+
+<h2>Kalender & Tagesspruch</h2>
+<div class="calendar-container">
+  <div class="calendar">
+    <div class="calendar-header">
+      <button onclick="previousMonth()">&lt;</button>
+      <h3 id="monthYear"></h3>
+      <button onclick="nextMonth()">&gt;</button>
+    </div>
+    <div class="calendar-weekdays">
+      <div>Mo</div>
+      <div>Di</div>
+      <div>Mi</div>
+      <div>Do</div>
+      <div>Fr</div>
+      <div>Sa</div>
+      <div>So</div>
+    </div>
+    <div class="calendar-days" id="calendarDays"></div>
+  </div>
+  
+  <div class="tear-off-calendar">
+    <div class="tear-off-header" id="todayDate"></div>
+    <div class="tear-off-quote" id="dailyQuote"></div>
+    <button onclick="getNextQuote()" class="next-quote">Neuer Spruch</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
